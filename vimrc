@@ -137,6 +137,9 @@ colorscheme vim-monokai-tasty
 "turn on numbering
 set nu
 
+"self explanitory
+set relativenumber
+
 " In many terminal emulators the mouse works just fine, thus enable it.
 if has('mouse')
   set mouse=a
@@ -155,6 +158,4 @@ let g:UltiSnipsSnippetsDir="~/.vim/ultisnips_rep/UltiSnips"
 " Disable vim separate clipboard
 " set clipboard=unnamed
 
-"self explanitory
-set relativenumber
 
