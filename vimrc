@@ -56,8 +56,9 @@ nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
 " Copy to system clipboard
-vnoremap <Leader>Y "+Y
-set clipboard^=unnamed
+"vnoremap <Leader>Y "+Y
+vnoremap <C-c> "+y
+" set clipboard^=unnamed
 
 " Self explenatory
 set splitright
