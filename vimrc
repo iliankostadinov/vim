@@ -66,6 +66,14 @@ set splitright
 " macros
 let @t = "vertical:term"
 
+" templates
+if has("autocmd")
+  augroup templates
+    autocmd BufNewFile *.sh 0r ~/.vim/templates/skeleton.sh
+    autocmd BufNewFile *.py 0r ~/.vim/templates/skeleton.py
+  augroup END
+endif
+
 " Compile python code
 vmap 9 :!python3<CR>
 
