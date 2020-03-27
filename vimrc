@@ -45,7 +45,9 @@ Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 
 " Autoclose
-Plugin 'townk/vim-autoclose'
+" Plugin 'townk/vim-autoclose' " has bug when used with youcompleteme
+" Autoclose brackets
+Plugin 'Raimondi/delimitMate'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -78,7 +80,7 @@ if has("autocmd")
 endif
 
 " Compile python code
-vmap 9 :!python3<CR>
+"vmap 9 :!python3<CR>
 
 " Nerdtree shourtcat
 map <c-n> :NERDTreeToggle <CR>
