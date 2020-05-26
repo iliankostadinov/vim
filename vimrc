@@ -68,6 +68,9 @@ vnoremap <C-c> "+y
 " Self explenatory
 set splitright
 
+" Self explenatory
+set splitbelow
+
 " macros
 let @t = "vertical:term"
 
@@ -134,6 +137,9 @@ EOF
 autocmd FileType python map <buffer> <F9> :w<CR>:exec '!python3' shellescape(@%, 1)<CR>
 autocmd FileType python imap <buffer> <F9> <esc>:w<CR>:exec '!python3' shellescape(@%, 1)<CR>
 
+" Compile python code with F5
+autocmd FileType python map <buffer> <F5> :w<CR>:term python3 "%"<CR>
+autocmd FileType python imap <buffer> <F5> <esc>:w<CR>:term python3 "%"<CR>
 
 " For full syntax highlighting:
 let python_highlight_all=1
