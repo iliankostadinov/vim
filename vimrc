@@ -50,6 +50,11 @@ Plugin 'patstockwell/vim-monokai-tasty'
 " Autoclose brackets
 Plugin 'Raimondi/delimitMate'
 
+" Autoclose
+" Plugin 'townk/vim-autoclose' " has bug when used with youcompleteme
+" Autoclose brackets
+Plugin 'Raimondi/delimitMate'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 
@@ -72,16 +77,22 @@ vnoremap <C-c> "+y
 " Self explenatory
 " set splitbelow
 
+" Self explenatory
+set splitbelow
+
 " macros
 let @t = "vertical:term"
 
 " templates
- if has("autocmd")
-   augroup templates
-     autocmd BufNewFile *.sh 0r ~/.vim/templates/skeleton.sh
-     autocmd BufNewFile *.py 0r ~/.vim/templates/skeleton.py
-   augroup END
- endif
+if has("autocmd")
+  augroup templates
+    autocmd BufNewFile *.sh 0r ~/.vim/templates/skeleton.sh
+    autocmd BufNewFile *.py 0r ~/.vim/templates/skeleton.py
+  augroup END
+endif
+
+" Compile python code
+"vmap 9 :!python3<CR>
 
 " Nerdtree shourtcat
 map <c-n> :NERDTreeToggle <CR>
@@ -135,16 +146,16 @@ EOF
 " Compile python code with F9
 autocmd FileType python map <buffer> <F9> :w<CR>:exec '!python3' shellescape(@%, 1)<CR>
 autocmd FileType python imap <buffer> <F9> <esc>:w<CR>:exec '!python3' shellescape(@%, 1)<CR>
-"
+
 " Compile python code with F5
 autocmd FileType python map <buffer> <F5> :w<CR>:term python3 "%"<CR>
 autocmd FileType python imap <buffer> <F5> <esc>:w<CR>:term python3 "%"<CR>
-"
-"" For full syntax highlighting:
-"let python_highlight_all=1
-"syntax on
-"
-"" color scheme
+
+" For full syntax highlighting:
+let python_highlight_all=1
+syntax on
+
+" color scheme
 colorscheme vim-monokai-tasty
 "" colorscheme monokai
 
