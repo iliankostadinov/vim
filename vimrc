@@ -37,6 +37,8 @@ Plugin 'ervandew/supertab'
 " Monokai light color scheme
 Plugin 'patstockwell/vim-monokai-tasty'
 
+" Plugin 'stephpy/vim-yaml'
+
 " Switch between color schemes
 " Plugin 'xolox/vim-colorscheme-switcher'
 " Plugin 'xolox/vim-misc'
@@ -70,7 +72,10 @@ vnoremap <C-c> "+y
 " set splitright
 
 " Self explenatory
-" set splitbelow
+set splitbelow
+
+" Intendation for yaml files
+autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 
 " macros
 let @t = "vertical:term"
