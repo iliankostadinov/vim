@@ -157,6 +157,9 @@ colorscheme vim-monokai-tasty
 "turn on numbering
 set nu
 
+" Highlight all search pattern matches
+set hlsearch
+
 "self explanitory
 set relativenumber
 
