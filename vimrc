@@ -74,6 +74,9 @@ vnoremap <C-c> "+y
 " Self explenatory
 set splitbelow
 
+" Configure spaces instead tab for all files
+set tabstop=4 shiftwidth=4 softtabstop=4 expandtab
+
 " Intendation for yaml files
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 
@@ -110,7 +113,8 @@ map <c-n> :NERDTreeToggle <CR>
 "    \ set tabstop=2
 "    \ set softtabstop=2
 "    \ set shiftwidth=2
-"
+
+
 "" Use the below highlight group when displaying bad whitespace is desired.
 "highlight BadWhitespace ctermbg=red guibg=red
 "
@@ -180,5 +184,9 @@ set relativenumber
 
 " Disable vim separate clipboard
 " set clipboard=unnamed
+"
+" Enable yaml checks for syntastic plugin
+let g:syntastic_yaml_checkers = ['yamllint']
 
-
+" Maping for sites.txt on yoda
+nnoremap <silent> <F3> :e scp://k.i/sites.txt<CR>
