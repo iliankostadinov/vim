@@ -52,6 +52,9 @@ Plugin 'patstockwell/vim-monokai-tasty'
 " Autoclose brackets
 Plugin 'Raimondi/delimitMate'
 
+" Show line indentetion toggel with <Leader>ig
+Plugin 'nathanaelkane/vim-indent-guides'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 
@@ -168,9 +171,9 @@ set hlsearch
 set relativenumber
 
 " In many terminal emulators the mouse works just fine, thus enable it.
-" if has('mouse')
-"   set mouse=a
-" endif
+ if has('mouse')
+   set mouse=a
+ endif
 
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
 "let g:UltiSnipsExpandTrigger="<c-j>"
